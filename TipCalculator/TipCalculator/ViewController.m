@@ -114,7 +114,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 -(void)updateDisplay{
     float amount = [_billMade floatValue];
-    float percentage = _percentage;
+    //float percentage = _percentage;
     float percentDivideby100 = _percentage/100;
     float tip = amount * percentDivideby100;
     float totalBillFloat = tip+amount;
@@ -156,8 +156,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
     // Update call amount value
     NSNumber *amount = [[NSNumber alloc] initWithFloat:(float)centAmount / 100.0f];
+    
+    //Upating the bill amount
     _billMade = amount;
-    NSLog(@"Bill made %@",_billMade);
+   
     // Write amount with currency symbols to the textfield
     NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
     [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
@@ -169,38 +171,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 
--(NSString *)convertInDollarFormat:(NSString *)inputString{
-    
-    NSString *cleanCentString = [[inputString
-                                  componentsSeparatedByCharactersInSet:
-                                  [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
-                                 componentsJoinedByString:@""];
-    // Parse final integer value
-    NSInteger centAmount = cleanCentString.integerValue;
-    // Check the user input
-    if (inputString.length > 0)
-    {
-        // Digit added
-        centAmount = centAmount * 10 + inputString.integerValue;
-    }
-    else
-    {
-        // Digit deleted
-        centAmount = centAmount / 10;
-    }
-    // Update call amount value
-    NSNumber *amount = [[NSNumber alloc] initWithFloat:(float)centAmount / 100.0f];
-    // Write amount with currency symbols to the textfield
-    NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
-    [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
-    [_currencyFormatter setCurrencyCode:@"USD"];
-    [_currencyFormatter setNegativeFormat:@"-¤#,##0.00"];
-    return  [_currencyFormatter stringFromNumber:amount];
-}
-
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [_tfAmount resignFirstResponder];
+    [textField resignFirstResponder];
     return YES;
 }
 
@@ -267,5 +239,39 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [self.view setFrame:viewFrame];
     [UIView commitAnimations];
     
+    [textField resignFirstResponder];
 }
+
+
+
+#pragma mark - Helper methods.
+-(NSString *)convertInDollarFormat:(NSString *)inputString{
+    
+    NSString *cleanCentString = [[inputString
+                                  componentsSeparatedByCharactersInSet:
+                                  [[NSCharacterSet decimalDigitCharacterSet] invertedSet]]
+                                 componentsJoinedByString:@""];
+    // Parse final integer value
+    NSInteger centAmount = cleanCentString.integerValue;
+    // Check the user input
+    if (inputString.length > 0)
+    {
+        // Digit added
+        centAmount = centAmount * 10 + inputString.integerValue;
+    }
+    else
+    {
+        // Digit deleted
+        centAmount = centAmount / 10;
+    }
+    
+    NSNumber *amount = [[NSNumber alloc] initWithFloat:(float)centAmount / 100.0f];
+    NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
+    [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    [_currencyFormatter setCurrencyCode:@"USD"];
+    [_currencyFormatter setNegativeFormat:@"-¤#,##0.00"];
+    return  [_currencyFormatter stringFromNumber:amount];
+}
+
+
 @end

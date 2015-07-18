@@ -101,9 +101,9 @@
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="23j-ce-Hd9" secondAttribute="centerY" id="0F8-gT-dP5"/>
-                                    <constraint firstItem="OG7-SY-Rvd" firstAttribute="width" secondItem="PxJ-P6-OPr" secondAttribute="width" multiplier="0.4" id="9GD-CB-pck"/>
+                                    <constraint firstItem="OG7-SY-Rvd" firstAttribute="width" secondItem="PxJ-P6-OPr" secondAttribute="width" multiplier="0.5" id="9GD-CB-pck"/>
                                     <constraint firstAttribute="trailing" secondItem="23j-ce-Hd9" secondAttribute="trailing" constant="10" id="9WQ-5z-ReZ"/>
-                                    <constraint firstItem="23j-ce-Hd9" firstAttribute="width" secondItem="PxJ-P6-OPr" secondAttribute="width" multiplier="0.6" id="Brw-i2-ojc"/>
+                                    <constraint firstItem="23j-ce-Hd9" firstAttribute="width" secondItem="PxJ-P6-OPr" secondAttribute="width" multiplier="0.5" id="Brw-i2-ojc"/>
                                     <constraint firstItem="OG7-SY-Rvd" firstAttribute="leading" secondItem="PxJ-P6-OPr" secondAttribute="leading" id="EbX-B5-Vsr"/>
                                     <constraint firstItem="23j-ce-Hd9" firstAttribute="trailing" secondItem="PxJ-P6-OPr" secondAttribute="trailing" constant="-10" id="S7e-hT-VML"/>
                                     <constraint firstAttribute="centerY" secondItem="OG7-SY-Rvd" secondAttribute="centerY" constant="0.5" id="TZG-Fv-4zj"/>
@@ -128,8 +128,8 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSV-qJ-Quk">
-                                <rect key="frame" x="0.0" y="449" width="600" height="2"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSV-qJ-Quk">
+                                <rect key="frame" x="0.0" y="454" width="600" height="2"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="qlM-jB-8Nn"/>
@@ -236,6 +236,7 @@
                             <constraint firstItem="PxJ-P6-OPr" firstAttribute="top" secondItem="WSV-qJ-Quk" secondAttribute="bottom" constant="5" id="e6C-Zt-MCP"/>
                             <constraint firstItem="Txy-lo-l2z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="eMF-E4-GPZ"/>
                             <constraint firstItem="zd2-Oq-Vma" firstAttribute="width" secondItem="Gkc-8g-ywg" secondAttribute="width" id="fof-UH-vAL"/>
+                            <constraint firstItem="WSV-qJ-Quk" firstAttribute="top" secondItem="Gkc-8g-ywg" secondAttribute="bottom" constant="15" id="h28-zL-XRo"/>
                             <constraint firstItem="zd2-Oq-Vma" firstAttribute="centerX" secondItem="Gkc-8g-ywg" secondAttribute="centerX" id="htg-LK-MQs"/>
                             <constraint firstItem="o6C-VW-ZsZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ie0-Y3-MqA"/>
                             <constraint firstItem="Gkc-8g-ywg" firstAttribute="top" secondItem="zd2-Oq-Vma" secondAttribute="bottom" constant="10" id="ly1-Go-WU8"/>
@@ -266,6 +267,7 @@
                                 <exclude reference="vNN-Ff-VAQ"/>
                                 <exclude reference="J02-Vz-bvv"/>
                                 <exclude reference="N9D-tn-nXQ"/>
+                                <exclude reference="QHZ-cq-P95"/>
                             </mask>
                         </variation>
                     </view>

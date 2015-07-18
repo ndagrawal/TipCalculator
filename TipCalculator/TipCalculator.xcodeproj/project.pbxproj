@@ -26,6 +26,8 @@
 		C4D0888D1B59D08A008AF5EC /* MKTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D088861B59D08A008AF5EC /* MKTableViewCell.swift */; };
 		C4D0888E1B59D08A008AF5EC /* MKTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D088871B59D08A008AF5EC /* MKTextField.swift */; };
 		C4D088931B59F238008AF5EC /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D088921B59F238008AF5EC /* Icon-60@2x.png */; };
+		C4D088981B59F75E008AF5EC /* TipCalculatorTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D088971B59F75E008AF5EC /* TipCalculatorTheme.m */; };
+		C4D0889B1B59F76C008AF5EC /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D0889A1B59F76C008AF5EC /* ThemeManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,11 @@
 		C4D088861B59D08A008AF5EC /* MKTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTableViewCell.swift; sourceTree = "<group>"; };
 		C4D088871B59D08A008AF5EC /* MKTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKTextField.swift; sourceTree = "<group>"; };
 		C4D088921B59F238008AF5EC /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		C4D088951B59F746008AF5EC /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		C4D088961B59F75E008AF5EC /* TipCalculatorTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipCalculatorTheme.h; sourceTree = "<group>"; };
+		C4D088971B59F75E008AF5EC /* TipCalculatorTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipCalculatorTheme.m; sourceTree = "<group>"; };
+		C4D088991B59F76C008AF5EC /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
+		C4D0889A1B59F76C008AF5EC /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +120,7 @@
 		C4D088451B598EC6008AF5EC /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				C4D088941B59F72F008AF5EC /* Theme */,
 				C4D088911B59D0B4008AF5EC /* 3DParty */,
 				C4D0884A1B598EC6008AF5EC /* AppDelegate.h */,
 				C4D0884B1B598EC6008AF5EC /* AppDelegate.m */,
@@ -184,6 +192,18 @@
 				C4D088901B59D0AB008AF5EC /* OneFingerRotation */,
 			);
 			name = 3DParty;
+			sourceTree = "<group>";
+		};
+		C4D088941B59F72F008AF5EC /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				C4D088951B59F746008AF5EC /* Theme.h */,
+				C4D088961B59F75E008AF5EC /* TipCalculatorTheme.h */,
+				C4D088971B59F75E008AF5EC /* TipCalculatorTheme.m */,
+				C4D088991B59F76C008AF5EC /* ThemeManager.h */,
+				C4D0889A1B59F76C008AF5EC /* ThemeManager.m */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D0888B1B59D08A008AF5EC /* MKLabel.swift in Sources */,
+				C4D088981B59F75E008AF5EC /* TipCalculatorTheme.m in Sources */,
 				C4D0887F1B59C197008AF5EC /* NGOneFingerRotationGestureRecognizer.m in Sources */,
 				C4D0888E1B59D08A008AF5EC /* MKTextField.swift in Sources */,
 				C4D0884F1B598EC6008AF5EC /* ViewController.m in Sources */,
@@ -298,6 +319,7 @@
 				C4D0884C1B598EC6008AF5EC /* AppDelegate.m in Sources */,
 				C4D0888D1B59D08A008AF5EC /* MKTableViewCell.swift in Sources */,
 				C4D0888C1B59D08A008AF5EC /* MKLayer.swift in Sources */,
+				C4D0889B1B59F76C008AF5EC /* ThemeManager.m in Sources */,
 				C4D088491B598EC6008AF5EC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
